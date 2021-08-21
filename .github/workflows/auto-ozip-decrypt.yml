@@ -40,7 +40,8 @@ jobs:
              sudo -H pip install --upgrade pip
              sudo -H pip install setuptools wheel docopt pycryptodome
              wget https://raw.githubusercontent.com/techyminati/oppo_ozip_decrypt/master/ozipdecrypt.py
-             sudo python ozipdecrypt.py RMX1911EX_11_OTA_1730_all_aWuTSP83kZvF.zip
+             sudo python ozipdecrypt.py $FIRMWARE_NAME
+              zip -r RMX1911EX_11_OTA_1730_all_aWuTSP83kZvF.ozip out #edit this filename
            
 
        - name: Upload Decrypted zip if AES keys not found.
